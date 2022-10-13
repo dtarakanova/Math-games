@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="843ebb86-0259-40ed-b7eb-9f012ef00b1d" name="Changes" comment="Add Makefile">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/java-project-61.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/install/app/bin/app" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/install/app/bin/app.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/install/app/lib/app-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/libs/app-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/scripts/app" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/scripts/app.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-    </list>
+    <list default="true" id="843ebb86-0259-40ed-b7eb-9f012ef00b1d" name="Changes" comment="Bug fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +58,6 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "17 (WSL)",
     "last_opened_file_path": "//wsl$/Ubuntu/home/pelmen/java-project-61",
     "project.structure.last.edited": "Project",
@@ -213,7 +196,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665671302516</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Bug fix">
+      <created>1665675256711</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665675256711</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Bug fix">
+      <created>1665675281438</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665675281438</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +226,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Makefile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Makefile" />
+    <MESSAGE value="Bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
   </component>
 </project>
