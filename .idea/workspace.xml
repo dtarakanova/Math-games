@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bfd38cb-f191-4007-aae2-75e2206de817" name="Changes" comment="Remove .idea">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Cli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="0bfd38cb-f191-4007-aae2-75e2206de817" name="Changes" comment="Add Cli.java">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Engine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
@@ -14,12 +13,17 @@
       <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/install/app/lib/app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/install/app/lib/app-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/libs/app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/libs/app-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/checkstyle/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/reports/checkstyle/main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/src/main/java/hexlet/code/Cli.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/install/app/bin/app" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/install/app/bin/app.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/install/app/lib/app-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/libs/app-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/scripts/app" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/scripts/app.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,6 +104,27 @@
   }
 }</component>
   <component name="RunManager" selected="Gradle.app [installDist]">
+    <configuration name="app [assembleDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="assembleDist" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="app [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -146,6 +171,7 @@
       <list>
         <item itemvalue="Gradle.app [installDist]" />
         <item itemvalue="Gradle.app [clean]" />
+        <item itemvalue="Gradle.app [assembleDist]" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666015201574</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add Cli.java">
+      <created>1666016228971</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666016228971</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,6 +221,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Remove .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove .idea" />
+    <MESSAGE value="Add Cli.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Cli.java" />
   </component>
 </project>
