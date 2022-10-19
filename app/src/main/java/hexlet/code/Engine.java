@@ -52,6 +52,9 @@ public class Engine {
             case 3:
                 System.out.println("What is the result of the expression?");
                 break;
+            case 4:
+                System.out.println("Find the greatest common divisor of given numbers.");
+                break;
             default:
                 System.out.println("No game under number " + gameNumber + " found.");
                 break;
@@ -67,6 +70,9 @@ public class Engine {
             case 3:
                 Calc.calculationGame();
                 break;
+            case 4:
+                GCD.findGCD();
+                break;
             default:
                 System.out.println("No game under number " + gameNumber + " found.");
                 break;
@@ -80,6 +86,9 @@ public class Engine {
                 break;
             case 3:
                 System.out.println("Question: " + Calc.firstNumber + " " + Calc.operator + " " + Calc.secondNumber);
+                break;
+            case 4:
+                System.out.println("Question: " + GCD.number1 + " " + GCD.number2);
                 break;
             default:
                 System.out.println("No game under number " + gameNumber + " found.");
