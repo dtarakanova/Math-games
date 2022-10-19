@@ -10,3 +10,6 @@ https://asciinema.org/a/DKWDbYpTyf4nE0eRULQEAeba7
 
 **Even game (#2)**
 https://asciinema.org/a/gkpJnf2awSbqbAYWriu6OQd1A
+
+**Calc game (#3)**
+https://asciinema.org/a/1BufX0lTPBzV2UxTXbhKODjac

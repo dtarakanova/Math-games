@@ -11,6 +11,7 @@ public class App {
         System.out.print("Please enter the game number and press Enter.\n"
                 + "1 - Greet\n"
                 + "2 - Even\n"
+                + "3 - Calc\n"
                 + "0 - Exit\n"
                 + "Your choice: ");
         Scanner gn = new Scanner(System.in);
@@ -27,6 +28,9 @@ public class App {
                 Engine.greeting();
                 break;
             case 2:
+                Engine.gameMechanics();
+                break;
+            case 3:
                 Engine.gameMechanics();
                 break;
             default:

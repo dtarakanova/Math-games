@@ -49,6 +49,9 @@ public class Engine {
             case 2:
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
                 break;
+            case 3:
+                System.out.println("What is the result of the expression?");
+                break;
             default:
                 System.out.println("No game under number " + gameNumber + " found.");
                 break;
@@ -61,6 +64,9 @@ public class Engine {
             case 2:
                 Even.evenGame();
                 break;
+            case 3:
+                Calc.calculationGame();
+                break;
             default:
                 System.out.println("No game under number " + gameNumber + " found.");
                 break;
@@ -71,6 +77,9 @@ public class Engine {
         switch (gameNumber) {
             case 2:
                 System.out.println("Question: " + Even.numberForTest);
+                break;
+            case 3:
+                System.out.println("Question: " + Calc.firstNumber + " " + Calc.operator + " " + Calc.secondNumber);
                 break;
             default:
                 System.out.println("No game under number " + gameNumber + " found.");
