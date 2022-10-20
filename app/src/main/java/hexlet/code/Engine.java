@@ -94,7 +94,7 @@ public class Engine {
                 System.out.println("Question: " + Calc.firstNumber + " " + Calc.operator + " " + Calc.secondNumber);
                 break;
             case 4:
-                System.out.println("Question: " + GCD.number1 + " " + GCD.number2);
+                System.out.println("Question: " + GCD.numberOne + " " + GCD.numberTwo);
                 break;
             case 5:
                 System.out.println("Question: " + Progression.progressionToPrint);

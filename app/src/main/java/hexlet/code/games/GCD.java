@@ -3,27 +3,17 @@ package src.main.java.hexlet.code.games;
 import static src.main.java.hexlet.code.Engine.correctAnswer;
 
 public class GCD {
-    public static int number1;
-    public static int number2;
+    public static int numberOne;
+    public static int numberTwo;
 
     public static void findGCD() {
-        number1 = (int) (1 + Math.random() * 99);
-        number2 = (int) (1 + Math.random() * 99);
-        if (number1 >= number2) {
-            for (var i = 1; i < number1; i++) {
-                if ((number1 % i == 0) && (number2 % i == 0)) {
+        numberOne = (int) (1 + Math.random() * 99);
+        numberTwo = (int) (1 + Math.random() * 99);
+        int getMin = Math.min(numberOne,numberTwo);
+            for (int i = 1; i <= getMin; i++) {
+                if ((numberOne % i == 0) && (numberTwo % i == 0)) {
                     correctAnswer = String.valueOf(i);
                 }
             }
-        } else if (number1 == number2) {
-            correctAnswer = String.valueOf(number1);
-        } else {
-            for (var i = 1; i < number2; i++) {
-                if ((number1 % i == 0) && (number2 % i == 0)) {
-                    correctAnswer = String.valueOf(i);
-                }
-            }
-
-        }
     }
 }
