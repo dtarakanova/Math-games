@@ -13,7 +13,7 @@ public class Progression {
         int progressionLength = (int) (Math.random() * minLimit + maxLimit);
         int baseElement = (int) (Math.random() * 100);
         int progressionStep = (int) (Math.random() * 9 + 1);
-        int missingElement = (int) (Math.random() * progressionLength);
+        int missingElement = (int) (Math.random() * progressionLength + 1);
         var progressionToDisplay = new StringBuilder();
 
         //Заполнение прогрессии

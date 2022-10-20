@@ -24,6 +24,8 @@
       <change beforePath="$PROJECT_DIR$/app/build/install/app/bin/app.bat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/install/app/lib/app-1.0-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/libs/app-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/checkstyle/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/reports/checkstyle/main.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/scripts/app" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/scripts/app.bat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
@@ -134,7 +136,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.app [checkstyleMain]">
+  <component name="RunManager" selected="Gradle.app [installDist]">
     <configuration name="app [assembleDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -221,9 +223,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.app [checkstyleMain]" />
         <item itemvalue="Gradle.app [installDist]" />
         <item itemvalue="Gradle.app [clean]" />
+        <item itemvalue="Gradle.app [checkstyleMain]" />
         <item itemvalue="Gradle.app [assembleDist]" />
       </list>
     </recent_temporary>
@@ -349,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666250068139</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fix progression game issue">
+      <created>1666251156419</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1666251156419</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
