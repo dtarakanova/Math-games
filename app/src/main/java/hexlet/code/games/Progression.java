@@ -11,22 +11,22 @@ public class Progression {
         int minLimit = 5;
         int maxLimit = 6;
         int progressionLength = (int) (Math.random() * minLimit + maxLimit);
-        int supportingElement = (int) (Math.random() * 100);
+        int baseElement = (int) (Math.random() * 100);
         int progressionStep = (int) (Math.random() * 9 + 1);
         int missingElement = (int) (Math.random() * progressionLength);
         var progressionToDisplay = new StringBuilder();
 
         //Заполнение прогрессии
-        for (int i = 0; i < progressionLength; i++) {
+        for (int i = 1; i < progressionLength; i++) {
             if (i == missingElement) {
-                progressionToDisplay.append("..");
-                correctAnswer = String.valueOf(supportingElement);
+                progressionToDisplay.append(" ..");
+                correctAnswer = String.valueOf(baseElement);
             } else {
-                progressionToDisplay.append(" " + supportingElement);
+                progressionToDisplay.append(" " + baseElement);
             }
-            supportingElement = supportingElement + progressionStep;
-            progressionToPrint = progressionToDisplay.toString();
+            baseElement = baseElement + progressionStep;
         }
+        progressionToPrint = progressionToDisplay.toString();
     }
 }
 
