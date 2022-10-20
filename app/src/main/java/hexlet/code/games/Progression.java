@@ -13,11 +13,11 @@ public class Progression {
         int progressionLength = (int) (Math.random() * minLimit + maxLimit);
         int baseElement = (int) (Math.random() * 100);
         int progressionStep = (int) (Math.random() * 9 + 1);
-        int missingElement = (int) (Math.random() * progressionLength + 1);
+        int missingElement = (int) (Math.random() * progressionLength);
         var progressionToDisplay = new StringBuilder();
 
         //Заполнение прогрессии
-        for (int i = 1; i < progressionLength; i++) {
+        for (int i = 0; i < progressionLength; i++) {
             if (i == missingElement) {
                 progressionToDisplay.append(" ..");
                 correctAnswer = String.valueOf(baseElement);
@@ -26,7 +26,8 @@ public class Progression {
             }
             baseElement = baseElement + progressionStep;
         }
-        progressionToPrint = progressionToDisplay.toString();
+        String interimString = progressionToDisplay.toString();
+        progressionToPrint = interimString.trim();
     }
 }
 
