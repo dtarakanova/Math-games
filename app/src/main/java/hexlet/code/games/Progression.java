@@ -19,7 +19,7 @@ public class Progression {
         //Заполнение прогрессии
         for (int i = 0; i < progressionLength; i++) {
             if (i == missingElement) {
-                progressionToDisplay.append(" ..");
+                progressionToDisplay.append("..");
                 correctAnswer = String.valueOf(supportingElement);
             } else {
                 progressionToDisplay.append(" " + supportingElement);
