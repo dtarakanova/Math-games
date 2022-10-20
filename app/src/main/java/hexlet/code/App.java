@@ -13,6 +13,7 @@ public class App {
                 + "2 - Even\n"
                 + "3 - Calc\n"
                 + "4 - GCD\n"
+                + "5 - Progression\n"
                 + "0 - Exit\n"
                 + "Your choice: ");
         Scanner gn = new Scanner(System.in);
@@ -22,24 +23,14 @@ public class App {
     }
 
     public static void chooseGame() {
-        switch (gameNumber) {
-            case 0:
-                break;
-            case 1:
-                Engine.greeting();
-                break;
-            case 2:
-                Engine.gameMechanics();
-                break;
-            case 3:
-                Engine.gameMechanics();
-                break;
-            case 4:
-                Engine.gameMechanics();
-                break;
-            default:
-                System.out.println("No game " + gameNumber + " found");
-                break;
+        if (gameNumber == 0) {
+            System.exit(0);
+        } else if (gameNumber == 1) {
+            Engine.greeting();
+        } else if (gameNumber >= 2 && gameNumber <= 6) {
+            Engine.gameMechanics();
+        } else {
+            System.out.println("No game " + gameNumber + " found");
         }
     }
 }

@@ -55,6 +55,9 @@ public class Engine {
             case 4:
                 System.out.println("Find the greatest common divisor of given numbers.");
                 break;
+            case 5:
+                System.out.println("What number is missing in the progression?");
+                break;
             default:
                 System.out.println("No game under number " + gameNumber + " found.");
                 break;
@@ -73,6 +76,9 @@ public class Engine {
             case 4:
                 GCD.findGCD();
                 break;
+            case 5:
+                Progression.generateProgression();
+                break;
             default:
                 System.out.println("No game under number " + gameNumber + " found.");
                 break;
@@ -89,6 +95,9 @@ public class Engine {
                 break;
             case 4:
                 System.out.println("Question: " + GCD.number1 + " " + GCD.number2);
+                break;
+            case 5:
+                System.out.println("Question: " + Progression.progressionToPrint);
                 break;
             default:
                 System.out.println("No game under number " + gameNumber + " found.");
