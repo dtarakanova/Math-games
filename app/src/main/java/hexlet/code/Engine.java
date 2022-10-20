@@ -58,6 +58,9 @@ public class Engine {
             case 5:
                 System.out.println("What number is missing in the progression?");
                 break;
+            case 6:
+                System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+                break;
             default:
                 System.out.println("No game under number " + gameNumber + " found.");
                 break;
@@ -79,12 +82,16 @@ public class Engine {
             case 5:
                 Progression.generateProgression();
                 break;
+            case 6:
+                Prime.primeGame();
+                break;
             default:
                 System.out.println("No game under number " + gameNumber + " found.");
                 break;
         }
     }
 
+    //Вопрос с конкретными значениями
     public static void askQuesion() {
         switch (gameNumber) {
             case 2:
@@ -98,6 +105,9 @@ public class Engine {
                 break;
             case 5:
                 System.out.println("Question: " + Progression.progressionToPrint);
+                break;
+            case 6:
+                System.out.println("Question: " + Prime.numberToCheck);
                 break;
             default:
                 System.out.println("No game under number " + gameNumber + " found.");

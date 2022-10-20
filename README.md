@@ -19,3 +19,7 @@ https://asciinema.org/a/cEU2kutC3sVlLFjtKFYsrNRzG
 
 **Progression game (#5)**
 https://asciinema.org/a/nqL9Qr4C9JrXJkQjcfIkcDN78
+
+**Prime game (#6)**
+https://asciinema.org/a/V16GHuNuwjzj3LLoM1Z2HiuLX
+
