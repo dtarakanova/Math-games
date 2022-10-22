@@ -3,18 +3,18 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Calc {
-    private static final int numberOfRounds = 3;
-    private static final int maxLimit = 100;
+    private static final int NUMBEROFROUNDS = 3;
+    private static final int MAXLIMIT = 100;
 
     public static void calculationGame() {
         String gameTask = "What is the result of the expression?";
-        String[] question = new String[numberOfRounds];
-        String[] rightAnswer = new String[numberOfRounds];
+        String[] question = new String[NUMBEROFROUNDS];
+        String[] rightAnswer = new String[NUMBEROFROUNDS];
 
-        for (var i = 0; i < numberOfRounds; i++) {
+        for (var i = 0; i < NUMBEROFROUNDS; i++) {
             // Генерация чисел
-            int firstNumber = (int) (Math.random() * maxLimit);
-            int secondNumber = (int) (Math.random() * maxLimit);
+            int firstNumber = (int) (Math.random() * MAXLIMIT);
+            int secondNumber = (int) (Math.random() * MAXLIMIT);
             // Генерация оператора
             char[] allOperators = {'+', '-', '*'};
             char operator = ' ';
