@@ -4,21 +4,22 @@ import hexlet.code.Engine;
 
 public class Progression {
 
-    public static void generateProgression() {
-        var numberOfRounds = 3;
-        var minLength = 5;
-        var maxLength = 6;
-        var baseElementLimit = 100;
-        var minStep = 1;
-        var maxStep = 9;
-        String gameTask = "What number is missing in the progression?.";
-        String[] question = new String[numberOfRounds];
-        String[] rightAnswer = new String[numberOfRounds];
+    private static final int NUMBEROFROUNDS = 3;
+    private static final int MINLENGTH = 5;
+    private static final int MAXLENGTH = 6;
+    private static final int BASEELEMENTLIMIT = 100;
+    private static final int MINSTEP = 1;
+    private static final int MAXSTEP = 9;
 
-        for (var i = 0; i < numberOfRounds; i++) {
-            var progressionLength = (int) (Math.random() * minLength + maxLength);
-            var baseElement = (int) (Math.random() * baseElementLimit);
-            var progressionStep = (int) (Math.random() * maxStep + minStep);
+    public static void generateProgression() {
+        String gameTask = "What number is missing in the progression?.";
+        String[] question = new String[NUMBEROFROUNDS];
+        String[] rightAnswer = new String[NUMBEROFROUNDS];
+
+        for (var i = 0; i < NUMBEROFROUNDS; i++) {
+            var progressionLength = (int) (Math.random() * MINLENGTH + MAXLENGTH);
+            var baseElement = (int) (Math.random() * BASEELEMENTLIMIT);
+            var progressionStep = (int) (Math.random() * MAXSTEP + MINSTEP);
             var missingElement = (int) (Math.random() * progressionLength);
             String[] progressionToPrint = createProgression(baseElement, progressionStep, progressionLength);
             rightAnswer[i] = progressionToPrint[missingElement];

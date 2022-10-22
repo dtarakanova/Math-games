@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Engine {
     private static String userName;
     private static String answer;
+    private static final int CORRECTANSWERS = 3;
 
     //Механика игры
     public static void gameMechanics(String gameTask, String[] question, String[] rightAnswer) {
         var i = 0;
-        var correctAnswers = 3;
         greeting();
         System.out.println(gameTask);
-        for (i = 0; i < correctAnswers; i++) {
+        for (i = 0; i < CORRECTANSWERS; i++) {
             System.out.println(question[i]);
             getAnswer();
             if (answer.equals(rightAnswer[i])) {
@@ -23,7 +23,7 @@ public class Engine {
                 break;
             }
         }
-        if (i == correctAnswers) {
+        if (i == CORRECTANSWERS) {
             System.out.println("Congratulations, " + userName + "!");
         }
     }

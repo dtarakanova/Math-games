@@ -1,21 +1,20 @@
 package hexlet.code.games;
 
-
 import hexlet.code.Engine;
 
 public class GCD {
+    private static final int NUMBEROFROUNDS = 3;
+    private static final int MINLIMIT = 1;
+    private static final int MAXLIMIT = 99;
 
     public static void findGCD() {
-        var numberOfRounds = 3;
-        var minLimit = 1;
-        var maxLimit = 99;
         String gameTask = "Find the greatest common divisor of given numbers.";
-        String[] question = new String[numberOfRounds];
-        String[] rightAnswer = new String[numberOfRounds];
+        String[] question = new String[NUMBEROFROUNDS];
+        String[] rightAnswer = new String[NUMBEROFROUNDS];
 
-        for (var i = 0; i < numberOfRounds; i++) {
-            int numberOne = (int) (minLimit + Math.random() * maxLimit);
-            int numberTwo = (int) (minLimit + Math.random() * maxLimit);
+        for (var i = 0; i < NUMBEROFROUNDS; i++) {
+            int numberOne = (int) (MINLIMIT + Math.random() * MAXLIMIT);
+            int numberTwo = (int) (MINLIMIT + Math.random() * MAXLIMIT);
             question[i] = "Question: " + numberOne + " " + numberTwo;
             rightAnswer[i] = String.valueOf(gcdCalculation(numberOne, numberTwo));
         }

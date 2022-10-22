@@ -4,15 +4,16 @@ import hexlet.code.Engine;
 
 public class Prime {
 
-    public static void primeGame() {
-        var numberOfRounds = 3;
-        var maxLimit = 100;
-        String gameTask = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[] question = new String[numberOfRounds];
-        String[] rightAnswer = new String[numberOfRounds];
+    private static final int NUMBEROFROUNDS = 3;
+    private static final int MAXLIMIT = 100;
 
-        for (var i = 0; i < numberOfRounds; i++) {
-            int numberToCheck = (int) (Math.random() * maxLimit);
+    public static void primeGame() {
+        String gameTask = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        String[] question = new String[NUMBEROFROUNDS];
+        String[] rightAnswer = new String[NUMBEROFROUNDS];
+
+        for (var i = 0; i < NUMBEROFROUNDS; i++) {
+            int numberToCheck = (int) (Math.random() * MAXLIMIT);
             question[i] = "Question: " + numberToCheck;
             rightAnswer[i] = isPrime(numberToCheck) ? "yes" : "no";
         }

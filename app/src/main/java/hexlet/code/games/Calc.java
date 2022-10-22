@@ -15,6 +15,7 @@ public class Calc {
             // Генерация чисел
             int firstNumber = (int) (Math.random() * MAXLIMIT);
             int secondNumber = (int) (Math.random() * MAXLIMIT);
+
             // Генерация оператора
             char[] allOperators = {'+', '-', '*'};
             char operator = ' ';

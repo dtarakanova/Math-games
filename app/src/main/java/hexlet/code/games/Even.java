@@ -3,16 +3,16 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Even {
+    private static final int NUMBEROFROUNDS = 3;
+    private static final int MAXLIMIT = 100;
 
     public static void evenGame() {
-        var numberOfRounds = 3;
-        var maxLimit = 100;
         String gameTask = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        String[] question = new String[numberOfRounds];
-        String[] rightAnswer = new String[numberOfRounds];
+        String[] question = new String[NUMBEROFROUNDS];
+        String[] rightAnswer = new String[NUMBEROFROUNDS];
 
-        for (var i = 0; i < numberOfRounds; i++) {
-            int numberForTest = (int) (Math.random() * maxLimit);
+        for (var i = 0; i < NUMBEROFROUNDS; i++) {
+            int numberForTest = (int) (Math.random() * MAXLIMIT);
             question[i] = "Question: " + numberForTest;
             rightAnswer[i] = evenGameCheck(numberForTest);
         }
