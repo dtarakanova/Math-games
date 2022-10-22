@@ -1,15 +1,26 @@
-package src.main.java.hexlet.code.games;
+package hexlet.code.games;
 
-import static src.main.java.hexlet.code.Engine.correctAnswer;
+import hexlet.code.Engine;
 
 public class Even {
-    public static int numberForTest;
+
     public static void evenGame() {
-        numberForTest = (int) (Math.random() * 100);
-        if (numberForTest % 2 == 0) {
-            correctAnswer = "yes";
-        } else {
-            correctAnswer = "no";
+        var numberOfRounds = 3;
+        var maxLimit = 100;
+        String gameTask = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        String[] question = new String[numberOfRounds];
+        String[] rightAnswer = new String[numberOfRounds];
+
+        for (var i = 0; i < numberOfRounds; i++) {
+            int numberForTest = (int) (Math.random() * maxLimit);
+            question[i] = "Question: " + numberForTest;
+            rightAnswer[i] = evenGameCheck(numberForTest);
         }
+
+        Engine.gameMechanics(gameTask, question, rightAnswer);
+    }
+
+    private static String evenGameCheck(int numberForTest) {
+        return numberForTest % 2 == 0 ? "yes" : "no";
     }
 }

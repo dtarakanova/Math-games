@@ -1,19 +1,30 @@
-package src.main.java.hexlet.code.games;
+package hexlet.code.games;
 
-import static src.main.java.hexlet.code.Engine.correctAnswer;
+
+import hexlet.code.Engine;
 
 public class GCD {
-    public static int numberOne;
-    public static int numberTwo;
 
     public static void findGCD() {
-        numberOne = (int) (1 + Math.random() * 99);
-        numberTwo = (int) (1 + Math.random() * 99);
-        int getMin = Math.min(numberOne, numberTwo);
-        for (int i = 1; i <= getMin; i++) {
-            if ((numberOne % i == 0) && (numberTwo % i == 0)) {
-                correctAnswer = String.valueOf(i);
-            }
+        var numberOfRounds = 3;
+        var minLimit = 1;
+        var maxLimit = 99;
+        String gameTask = "Find the greatest common divisor of given numbers.";
+        String[] question = new String[numberOfRounds];
+        String[] rightAnswer = new String[numberOfRounds];
+
+        for (var i = 0; i < numberOfRounds; i++) {
+            int numberOne = (int) (minLimit + Math.random() * maxLimit);
+            int numberTwo = (int) (minLimit + Math.random() * maxLimit);
+            question[i] = "Question: " + numberOne + " " + numberTwo;
+            rightAnswer[i] = String.valueOf(gcdCalculation(numberOne, numberTwo));
         }
+
+        Engine.gameMechanics(gameTask, question, rightAnswer);
+    }
+
+
+    private static int gcdCalculation(int numberOne, int numberTwo) {
+        return numberTwo == 0 ? numberOne : gcdCalculation(numberTwo, numberOne % numberTwo);
     }
 }

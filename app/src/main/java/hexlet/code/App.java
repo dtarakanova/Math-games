@@ -1,11 +1,15 @@
 package hexlet.code;
 
-import src.main.java.hexlet.code.Engine;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
+
 public class App {
-    public static int gameNumber;
 
     public static void main(String[] args) {
         System.out.print("Please enter the game number and press Enter.\n"
@@ -18,20 +22,34 @@ public class App {
                 + "0 - Exit\n"
                 + "Your choice: ");
         Scanner gn = new Scanner(System.in);
-        gameNumber = Integer.parseInt(gn.next());
+        int gameNumber = Integer.parseInt(gn.next());
         System.out.println();
-        chooseGame();
-    }
 
-    public static void chooseGame() {
-        if (gameNumber == 0) {
-            System.exit(0);
-        } else if (gameNumber == 1) {
-            Engine.greeting();
-        } else if (gameNumber >= 2 && gameNumber <= 6) {
-            Engine.gameMechanics();
-        } else {
-            System.out.println("No game " + gameNumber + " found");
+        switch (gameNumber) {
+            case 0:
+                System.out.println("Goodbye!");
+                break;
+            case 1:
+                Cli.greeting();
+                break;
+            case 2:
+                Even.evenGame();
+                break;
+            case 3:
+                Calc.calculationGame();
+                break;
+            case 4:
+                GCD.findGCD();
+                break;
+            case 5:
+                Progression.generateProgression();
+                break;
+            case 6:
+                Prime.primeGame();
+                break;
+            default:
+                System.out.println("No game " + gameNumber + " found");
+                break;
         }
     }
 }

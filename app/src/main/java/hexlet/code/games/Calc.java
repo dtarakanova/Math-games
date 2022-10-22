@@ -1,37 +1,55 @@
-package src.main.java.hexlet.code.games;
+package hexlet.code.games;
 
-import static src.main.java.hexlet.code.Engine.correctAnswer;
+import hexlet.code.Engine;
 
 public class Calc {
-    public static int firstNumber;
-    public static int secondNumber;
-    public static char operator;
 
     public static void calculationGame() {
-        firstNumber = (int) (Math.random() * 100);
-        secondNumber = (int) (Math.random() * 100);
-        char[] allOperators = {'+', '-', '*'};
-        int n = (int) (Math.random() * 3);
-        if (allOperators[n] == '+') {
-            operator = '+';
-        } else if (allOperators[n] == '-') {
-            operator = '-';
-        } else if (allOperators[n] == '*') {
-            operator = '*';
+        var numberOfRounds = 3;
+        var maxLimit = 100;
+        String gameTask = "What is the result of the expression?";
+        String[] question = new String[numberOfRounds];
+        String[] rightAnswer = new String[numberOfRounds];
+
+        for (var i = 0; i < numberOfRounds; i++) {
+            // Генерация чисел
+            int firstNumber = (int) (Math.random() * maxLimit);
+            int secondNumber = (int) (Math.random() * maxLimit);
+            // Генерация оператора
+            char[] allOperators = {'+', '-', '*'};
+            char operator = ' ';
+            var operatorPosition = (int) (Math.random() * allOperators.length);
+            if (allOperators[operatorPosition] == '+') {
+                operator = '+';
+            } else if (allOperators[operatorPosition] == '-') {
+                operator = '-';
+            } else if (allOperators[operatorPosition] == '*') {
+                operator = '*';
+            }
+            question[i] = "Question: " + firstNumber + " " + operator + " " + secondNumber;
+            rightAnswer[i] = String.valueOf(calculate(operator, firstNumber, secondNumber));
         }
 
-        switch (allOperators[n]) {
+        Engine.gameMechanics(gameTask, question, rightAnswer);
+    }
+
+
+    private static int calculate(char operator, int firstNumber, int secondNumber) {
+        var result = 0;
+        switch (operator) {
             case '+':
-                correctAnswer = String.valueOf(firstNumber + secondNumber);
+                result = firstNumber + secondNumber;
                 break;
             case '-':
-                correctAnswer = String.valueOf(firstNumber - secondNumber);
+                result = firstNumber - secondNumber;
                 break;
             case '*':
-                correctAnswer = String.valueOf(firstNumber * secondNumber);
+                result = firstNumber * secondNumber;
                 break;
             default:
-                System.out.println("Unknown operator " + allOperators[n]);
+                System.out.println("Unknown operator " + operator);
+                break;
         }
+        return result;
     }
 }
