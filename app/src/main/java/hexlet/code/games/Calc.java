@@ -3,10 +3,10 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Calc {
+    private static final int numberOfRounds = 3;
+    private static final int maxLimit = 100;
 
     public static void calculationGame() {
-        int numberOfRounds = 3;
-        int maxLimit = 100;
         String gameTask = "What is the result of the expression?";
         String[] question = new String[numberOfRounds];
         String[] rightAnswer = new String[numberOfRounds];
