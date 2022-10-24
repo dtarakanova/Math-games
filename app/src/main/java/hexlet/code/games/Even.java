@@ -1,10 +1,10 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Even {
     private static final int NUMBEROFROUNDS = 3;
-    private static final int MAXLIMIT = 100;
 
     public static void evenGame() {
         String gameTask = "Answer 'yes' if the number is even, otherwise answer 'no'.";
@@ -12,7 +12,7 @@ public class Even {
         String[] rightAnswer = new String[NUMBEROFROUNDS];
 
         for (var i = 0; i < NUMBEROFROUNDS; i++) {
-            int numberForTest = (int) (Math.random() * MAXLIMIT);
+            int numberForTest = Utils.findRandomNumber();
             question[i] = "Question: " + numberForTest;
             rightAnswer[i] = evenGameCheck(numberForTest);
         }

@@ -1,11 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Prime {
 
     private static final int NUMBEROFROUNDS = 3;
-    private static final int MAXLIMIT = 100;
 
     public static void primeGame() {
         String gameTask = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
@@ -13,7 +13,7 @@ public class Prime {
         String[] rightAnswer = new String[NUMBEROFROUNDS];
 
         for (var i = 0; i < NUMBEROFROUNDS; i++) {
-            int numberToCheck = (int) (Math.random() * MAXLIMIT);
+            int numberToCheck = Utils.findRandomNumber();
             question[i] = "Question: " + numberToCheck;
             rightAnswer[i] = isPrime(numberToCheck) ? "yes" : "no";
         }

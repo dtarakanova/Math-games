@@ -1,10 +1,10 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Calc {
     private static final int NUMBEROFROUNDS = 3;
-    private static final int MAXLIMIT = 100;
 
     public static void calculationGame() {
         String gameTask = "What is the result of the expression?";
@@ -12,11 +12,9 @@ public class Calc {
         String[] rightAnswer = new String[NUMBEROFROUNDS];
 
         for (var i = 0; i < NUMBEROFROUNDS; i++) {
-            // Генерация чисел
-            int firstNumber = (int) (Math.random() * MAXLIMIT);
-            int secondNumber = (int) (Math.random() * MAXLIMIT);
+            int firstNumber = Utils.findRandomNumber();
+            int secondNumber = Utils.findRandomNumber();
 
-            // Генерация оператора
             char[] allOperators = {'+', '-', '*'};
             char operator = ' ';
             var operatorPosition = (int) (Math.random() * allOperators.length);

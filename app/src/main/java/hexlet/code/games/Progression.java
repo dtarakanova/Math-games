@@ -1,13 +1,13 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Progression {
 
     private static final int NUMBEROFROUNDS = 3;
     private static final int MINLENGTH = 5;
     private static final int MAXLENGTH = 6;
-    private static final int BASEELEMENTLIMIT = 100;
     private static final int MINSTEP = 1;
     private static final int MAXSTEP = 9;
 
@@ -18,7 +18,7 @@ public class Progression {
 
         for (var i = 0; i < NUMBEROFROUNDS; i++) {
             var progressionLength = (int) (Math.random() * MINLENGTH + MAXLENGTH);
-            var baseElement = (int) (Math.random() * BASEELEMENTLIMIT);
+            var baseElement = Utils.findRandomNumber();
             var progressionStep = (int) (Math.random() * MAXSTEP + MINSTEP);
             var missingElement = (int) (Math.random() * progressionLength);
             String[] progressionToPrint = createProgression(baseElement, progressionStep, progressionLength);

@@ -5,24 +5,28 @@ import java.util.Scanner;
 public class Engine {
     private static final int CORRECTANSWERS = 3;
 
-    //Механика игры
+    /* Общая механика для всех игр:
+    1. Приветствие и получение имени пользователя.
+    2. Вывод правил выбранной игры.
+    3. Вывод конкретного вопроса.
+    4. Получение ответа пользователя и его сравнение с правильным ответом.
+    5. В случае неверного ответа пользователя игра заканчивается, а пользователю предлагается попробовать снова.
+       После трех верных ответов игра завершается победой.
+     */
+
     public static void gameMechanics(String gameTask, String[] question, String[] rightAnswer) {
         var i = 0;
         String userName;
         String answer;
 
-        //Приветствие и ввод имени
         System.out.print("Welcome to the Brain Games!\nMay I have your name? ");
         Scanner sc = new Scanner(System.in);
         userName = sc.next();
         System.out.println("Hello, " + userName + "!");
 
-        //Запуск механики игры
         System.out.println(gameTask);
         for (i = 0; i < CORRECTANSWERS; i++) {
             System.out.println(question[i]);
-
-            //Получение ответа пользователя
             Scanner ta = new Scanner(System.in);
             System.out.print("Your answer: ");
             answer = ta.next();
