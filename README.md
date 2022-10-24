@@ -6,7 +6,7 @@
 <h1>Brain Games</h1>
 
 <h2>Description</h2>
-**Brain Games** - set of 5 simple math games to wake up your brain before the working day. To win in each game you have to give 3 correct answers in a row. If you make a mistake, the game ends.  
+Brain Games - set of 5 simple math games to wake up your brain before the working day. To win in each game you have to give 3 correct answers in a row. If you make a mistake, the game ends.  
 
 <h2>Demonstration</h2>
 
