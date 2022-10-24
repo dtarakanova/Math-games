@@ -14,7 +14,7 @@ public class Engine {
        После трех верных ответов игра завершается победой.
      */
 
-    public static void gameMechanics(String GAMETASK, String[] question, String[] rightAnswer) {
+    public static void gameMechanics(String gameTask, String[] question, String[] rightAnswer) {
         var i = 0;
         String userName;
         String answer;
@@ -24,7 +24,7 @@ public class Engine {
         userName = sc.next();
         System.out.println("Hello, " + userName + "!");
 
-        System.out.println(GAMETASK);
+        System.out.println(gameTask);
         for (i = 0; i < CORRECTANSWERS; i++) {
             System.out.println(question[i]);
             Scanner ta = new Scanner(System.in);
