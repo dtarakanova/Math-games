@@ -5,9 +5,10 @@ import hexlet.code.Utils;
 
 public class Calc {
     private static final int NUMBEROFROUNDS = 3;
+    private static final String GAMETASK = "What is the result of the expression?";
+
 
     public static void calculationGame() {
-        String gameTask = "What is the result of the expression?";
         String[] question = new String[NUMBEROFROUNDS];
         String[] rightAnswer = new String[NUMBEROFROUNDS];
 
@@ -21,7 +22,7 @@ public class Calc {
             rightAnswer[i] = String.valueOf(calculate(operator, firstNumber, secondNumber));
         }
 
-        Engine.gameMechanics(gameTask, question, rightAnswer);
+        Engine.gameMechanics(GAMETASK, question, rightAnswer);
     }
 
 

@@ -5,9 +5,10 @@ import hexlet.code.Utils;
 
 public class Even {
     private static final int NUMBEROFROUNDS = 3;
+    private static final String GAMETASK = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+
 
     public static void evenGame() {
-        String gameTask = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[] question = new String[NUMBEROFROUNDS];
         String[] rightAnswer = new String[NUMBEROFROUNDS];
 
@@ -17,7 +18,7 @@ public class Even {
             rightAnswer[i] = evenGameCheck(numberForTest);
         }
 
-        Engine.gameMechanics(gameTask, question, rightAnswer);
+        Engine.gameMechanics(GAMETASK, question, rightAnswer);
     }
 
     private static String evenGameCheck(int numberForTest) {

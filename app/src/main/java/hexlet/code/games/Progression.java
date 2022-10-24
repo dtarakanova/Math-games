@@ -10,9 +10,10 @@ public class Progression {
     private static final int MAXLENGTH = 6;
     private static final int MINSTEP = 1;
     private static final int MAXSTEP = 9;
+    private static final String GAMETASK = "What number is missing in the progression?";
+
 
     public static void generateProgression() {
-        String gameTask = "What number is missing in the progression?.";
         String[] question = new String[NUMBEROFROUNDS];
         String[] rightAnswer = new String[NUMBEROFROUNDS];
 
@@ -27,7 +28,7 @@ public class Progression {
             question[i] = "Question: " + String.join(" ", progressionToPrint);
         }
 
-        Engine.gameMechanics(gameTask, question, rightAnswer);
+        Engine.gameMechanics(GAMETASK, question, rightAnswer);
     }
 
 
