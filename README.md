@@ -3,10 +3,15 @@
 
 <a href="https://codeclimate.com/github/dtarakanova/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/0cd5d6933ba48ee3a601/maintainability" /></a>
 
+<h1>Brain Games</h1>
+
+<h2>Description</h2>
+**Brain Games** - set of 5 simple math games to wake up your brain before the working day. To win in each game you have to give 3 correct answers in a row. If you make a mistake, the game ends.  
+
+<h2>Demonstration</h2>
 
 **Greeting (#1)**
 https://asciinema.org/a/DKWDbYpTyf4nE0eRULQEAeba7
-
 
 **Even game (#2)**
 https://asciinema.org/a/gkpJnf2awSbqbAYWriu6OQd1A
