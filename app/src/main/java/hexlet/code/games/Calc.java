@@ -14,17 +14,9 @@ public class Calc {
         for (var i = 0; i < NUMBEROFROUNDS; i++) {
             int firstNumber = Utils.findRandomNumber();
             int secondNumber = Utils.findRandomNumber();
-
             char[] allOperators = {'+', '-', '*'};
-            char operator = ' ';
             var operatorPosition = (int) (Math.random() * allOperators.length);
-            if (allOperators[operatorPosition] == '+') {
-                operator = '+';
-            } else if (allOperators[operatorPosition] == '-') {
-                operator = '-';
-            } else if (allOperators[operatorPosition] == '*') {
-                operator = '*';
-            }
+            char operator = allOperators[operatorPosition];
             question[i] = "Question: " + firstNumber + " " + operator + " " + secondNumber;
             rightAnswer[i] = String.valueOf(calculate(operator, firstNumber, secondNumber));
         }
