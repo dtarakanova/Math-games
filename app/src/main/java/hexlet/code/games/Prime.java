@@ -26,16 +26,12 @@ public class Prime {
 
 
     private static boolean isPrime(int numberToCheck) {
-        var minNumber = 2;
-        if (numberToCheck < minNumber) {
-            return false;
-        } else {
-            for (var i = 2; i < numberToCheck; i++) {
-                if (numberToCheck % i == 0) {
-                    return false;
-                }
+        int numberOfDividers = 0;
+        for (int i = numberToCheck; i > 0; i--) {
+            if (numberToCheck % i == 0) {
+                numberOfDividers++;
             }
-            return true;
         }
+        return numberOfDividers == 2;
     }
 }
