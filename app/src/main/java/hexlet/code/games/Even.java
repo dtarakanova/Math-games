@@ -15,13 +15,13 @@ public class Even {
         for (var i = 0; i < NUMBEROFROUNDS; i++) {
             int numberForTest = Utils.findRandomNumber();
             question[i] = "Question: " + numberForTest;
-            rightAnswer[i] = evenGameCheck(numberForTest);
+            rightAnswer[i] = evenGameCheck(numberForTest) ? "yes" : "no";
         }
 
         Engine.gameMechanics(GAMETASK, question, rightAnswer);
     }
 
-    private static String evenGameCheck(int numberForTest) {
-        return numberForTest % 2 == 0 ? "yes" : "no";
+    private static boolean evenGameCheck(int numberForTest) {
+        return numberForTest % 2 == 0;
     }
 }
