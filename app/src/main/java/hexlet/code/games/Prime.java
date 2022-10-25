@@ -4,21 +4,24 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
-    private static final int NUMBEROFROUNDS = 3;
+    private static final int QUESTIONSARRAYSIZE = 3;
+    private static final int ANSWERSARRAYSIZE = 2;
+
     private static final String GAMETASK = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
 
     public static void primeGame() {
-        String[] question = new String[NUMBEROFROUNDS];
-        String[] rightAnswer = new String[NUMBEROFROUNDS];
+        String[][] questionAnswer = new String[QUESTIONSARRAYSIZE][ANSWERSARRAYSIZE];
 
-        for (var i = 0; i < NUMBEROFROUNDS; i++) {
+        for (var i = 0; i < QUESTIONSARRAYSIZE; i++) {
             int numberToCheck = Utils.findRandomNumber();
-            question[i] = "Question: " + numberToCheck;
-            rightAnswer[i] = isPrime(numberToCheck) ? "yes" : "no";
+            String question = "Question: " + numberToCheck;
+            String answer = isPrime(numberToCheck) ? "yes" : "no";
+            questionAnswer[i][0] = question;
+            questionAnswer[i][1] = answer;
         }
 
-        Engine.gameMechanics(GAMETASK, question, rightAnswer);
+        Engine.gameMechanics(GAMETASK, questionAnswer);
     }
 
 

@@ -5,7 +5,8 @@ import hexlet.code.Utils;
 
 public class Progression {
 
-    private static final int NUMBEROFROUNDS = 3;
+    private static final int QUESTIONSARRAYSIZE = 3;
+    private static final int ANSWERSARRAYSIZE = 2;
     private static final int MINLENGTH = 5;
     private static final int MAXLENGTH = 6;
     private static final int MINSTEP = 1;
@@ -14,21 +15,22 @@ public class Progression {
 
 
     public static void generateProgression() {
-        String[] question = new String[NUMBEROFROUNDS];
-        String[] rightAnswer = new String[NUMBEROFROUNDS];
+        String[][] questionAnswer = new String[QUESTIONSARRAYSIZE][ANSWERSARRAYSIZE];
 
-        for (var i = 0; i < NUMBEROFROUNDS; i++) {
+        for (var i = 0; i < QUESTIONSARRAYSIZE; i++) {
             var progressionLength = (int) (Math.random() * MINLENGTH + MAXLENGTH);
             var baseElement = Utils.findRandomNumber();
             var progressionStep = (int) (Math.random() * MAXSTEP + MINSTEP);
             var missingElement = (int) (Math.random() * progressionLength);
             String[] progressionToPrint = createProgression(baseElement, progressionStep, progressionLength);
-            rightAnswer[i] = progressionToPrint[missingElement];
+            String answer = progressionToPrint[missingElement];
             progressionToPrint[missingElement] = "..";
-            question[i] = "Question: " + String.join(" ", progressionToPrint);
+            String question = "Question: " + String.join(" ", progressionToPrint);
+            questionAnswer[i][0] = question;
+            questionAnswer[i][1] = answer;
         }
 
-        Engine.gameMechanics(GAMETASK, question, rightAnswer);
+        Engine.gameMechanics(GAMETASK, questionAnswer);
     }
 
 
