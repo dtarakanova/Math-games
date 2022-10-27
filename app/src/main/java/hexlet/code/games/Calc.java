@@ -18,7 +18,8 @@ public class Calc {
             int firstNumber = Utils.findRandomNumber(MIN_NUMBER, MAX_NUMBER);
             int secondNumber = Utils.findRandomNumber(MIN_NUMBER, MAX_NUMBER);
             char[] allOperators = {'+', '-', '*'};
-            var operatorPosition = (int) (Math.random() * allOperators.length);
+            int length = allOperators.length;
+            var operatorPosition = Utils.findPosition(length);
             char operator = allOperators[operatorPosition];
             String question = firstNumber + " " + operator + " " + secondNumber;
             String answer = String.valueOf(calculate(operator, firstNumber, secondNumber));
@@ -33,18 +34,10 @@ public class Calc {
     private static int calculate(char operator, int firstNumber, int secondNumber) {
         var result = 0;
         switch (operator) {
-            case '+':
-                result = firstNumber + secondNumber;
-                break;
-            case '-':
-                result = firstNumber - secondNumber;
-                break;
-            case '*':
-                result = firstNumber * secondNumber;
-                break;
-            default:
-                System.out.println("Unknown operator " + operator);
-                break;
+            case '+' -> result = firstNumber + secondNumber;
+            case '-' -> result = firstNumber - secondNumber;
+            case '*' -> result = firstNumber * secondNumber;
+            default -> System.out.println("Unknown operator " + operator);
         }
         return result;
     }

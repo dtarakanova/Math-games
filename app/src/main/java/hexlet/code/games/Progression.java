@@ -20,11 +20,11 @@ public class Progression {
         String[][] questionAnswer = new String[QUESTIONS_ARRAY_SIZE][ANSWERS_ARRAY_SIZE];
 
         for (var i = 0; i < QUESTIONS_ARRAY_SIZE; i++) {
-            var progressionLength = (int) (Math.random() * MIN_LENGTH + MAX_LENGTH);
+            var length = Utils.findRandomNumber(MIN_LENGTH, MAX_LENGTH);
             var baseElement = Utils.findRandomNumber(MIN_NUMBER, MAX_NUMBER);
-            var progressionStep = (int) (Math.random() * MAX_STEP + MIN_STEP);
-            var missingElement = (int) (Math.random() * progressionLength);
-            String[] progressionToPrint = createProgression(baseElement, progressionStep, progressionLength);
+            var progressionStep = Utils.findRandomNumber(MIN_STEP, MAX_STEP);
+            var missingElement = Utils.findPosition(length);
+            String[] progressionToPrint = createProgression(baseElement, progressionStep, length);
             String answer = progressionToPrint[missingElement];
             progressionToPrint[missingElement] = "..";
             String question = String.join(" ", progressionToPrint);
