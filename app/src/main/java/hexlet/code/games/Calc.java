@@ -34,10 +34,18 @@ public class Calc {
     private static int calculate(char operator, int firstNumber, int secondNumber) {
         var result = 0;
         switch (operator) {
-            case '+' -> result = firstNumber + secondNumber;
-            case '-' -> result = firstNumber - secondNumber;
-            case '*' -> result = firstNumber * secondNumber;
-            default -> System.out.println("Unknown operator " + operator);
+            case '+':
+                result = firstNumber + secondNumber;
+                break;
+            case '-':
+                result = firstNumber - secondNumber;
+                break;
+            case '*':
+                result = firstNumber * secondNumber;
+                break;
+            default:
+                System.out.println("Unknown operator " + operator);
+                break;
         }
         return result;
     }
