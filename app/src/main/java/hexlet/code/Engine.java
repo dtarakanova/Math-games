@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static final int CORRECTANSWERS = 3;
+    private static final int CORRECT_ANSWERS = 3;
 
     /* Общая механика для всех игр:
     1. Приветствие и получение имени пользователя.
@@ -25,7 +25,7 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
 
         System.out.println(gameTask);
-        for (i = 0; i < CORRECTANSWERS; i++) {
+        for (i = 0; i < CORRECT_ANSWERS; i++) {
             String question = questionAnswer[i][0];
             String rightAnswer = questionAnswer[i][1];
             System.out.println(question);

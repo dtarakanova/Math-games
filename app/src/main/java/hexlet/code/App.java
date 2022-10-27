@@ -13,11 +13,11 @@ public class App {
 
     private static final int GOODBYE = 0;
     private static final int GREETING = 1;
-    private static final int EVENGAME = 2;
-    private static final int CALCGAME = 3;
-    private static final int GCDGAME = 4;
-    private static final int PROGRESSIONGAME = 5;
-    private static final int PRIMEGAME = 6;
+    private static final int EVEN_GAME = 2;
+    private static final int CALC_GAME = 3;
+    private static final int GCD_GAME = 4;
+    private static final int PROGRESSION_GAME = 5;
+    private static final int PRIME_GAME = 6;
 
 
     public static void main(String[] args) {
@@ -38,11 +38,11 @@ public class App {
         switch (gameNumber) {
             case GOODBYE -> System.out.println("Goodbye!");
             case GREETING -> Cli.greeting();
-            case EVENGAME -> Even.evenGame();
-            case CALCGAME -> Calc.calculationGame();
-            case GCDGAME -> GCD.findGCD();
-            case PROGRESSIONGAME -> Progression.generateProgression();
-            case PRIMEGAME -> Prime.primeGame();
+            case EVEN_GAME -> Even.evenGame();
+            case CALC_GAME -> Calc.calculationGame();
+            case GCD_GAME -> GCD.findGCD();
+            case PROGRESSION_GAME -> Progression.generateProgression();
+            case PRIME_GAME -> Prime.primeGame();
             default -> System.out.println("No game " + gameNumber + " found");
         }
     }

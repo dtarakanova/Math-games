@@ -5,22 +5,22 @@ import hexlet.code.Utils;
 
 public class Progression {
 
-    private static final int QUESTIONSARRAYSIZE = 3;
-    private static final int ANSWERSARRAYSIZE = 2;
-    private static final int MINLENGTH = 5;
-    private static final int MAXLENGTH = 6;
-    private static final int MINSTEP = 1;
-    private static final int MAXSTEP = 9;
-    private static final String GAMETASK = "What number is missing in the progression?";
+    private static final int QUESTIONS_ARRAY_SIZE = 3;
+    private static final int ANSWERS_ARRAY_SIZE = 2;
+    private static final int MIN_LENGTH = 5;
+    private static final int MAX_LENGTH = 6;
+    private static final int MIN_STEP = 1;
+    private static final int MAX_STEP = 9;
+    private static final String GAME_TASK = "What number is missing in the progression?";
 
 
     public static void generateProgression() {
-        String[][] questionAnswer = new String[QUESTIONSARRAYSIZE][ANSWERSARRAYSIZE];
+        String[][] questionAnswer = new String[QUESTIONS_ARRAY_SIZE][ANSWERS_ARRAY_SIZE];
 
-        for (var i = 0; i < QUESTIONSARRAYSIZE; i++) {
-            var progressionLength = (int) (Math.random() * MINLENGTH + MAXLENGTH);
+        for (var i = 0; i < QUESTIONS_ARRAY_SIZE; i++) {
+            var progressionLength = (int) (Math.random() * MIN_LENGTH + MAX_LENGTH);
             var baseElement = Utils.findRandomNumber();
-            var progressionStep = (int) (Math.random() * MAXSTEP + MINSTEP);
+            var progressionStep = (int) (Math.random() * MAX_STEP + MIN_STEP);
             var missingElement = (int) (Math.random() * progressionLength);
             String[] progressionToPrint = createProgression(baseElement, progressionStep, progressionLength);
             String answer = progressionToPrint[missingElement];
@@ -30,7 +30,7 @@ public class Progression {
             questionAnswer[i][1] = answer;
         }
 
-        Engine.gameMechanics(GAMETASK, questionAnswer);
+        Engine.gameMechanics(GAME_TASK, questionAnswer);
     }
 
 
