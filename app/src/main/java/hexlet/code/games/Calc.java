@@ -6,6 +6,8 @@ import hexlet.code.Utils;
 public class Calc {
     private static final int QUESTIONS_ARRAY_SIZE = 3;
     private static final int ANSWERS_ARRAY_SIZE = 2;
+    static final int MIN_NUMBER = 1;
+    static final int MAX_NUMBER = 100;
     private static final String GAME_TASK = "What is the result of the expression?";
 
 
@@ -13,12 +15,12 @@ public class Calc {
         String[][] questionAnswer = new String[QUESTIONS_ARRAY_SIZE][ANSWERS_ARRAY_SIZE];
 
         for (var i = 0; i < QUESTIONS_ARRAY_SIZE; i++) {
-            int firstNumber = Utils.findRandomNumber();
-            int secondNumber = Utils.findRandomNumber();
+            int firstNumber = Utils.findRandomNumber(MIN_NUMBER, MAX_NUMBER);
+            int secondNumber = Utils.findRandomNumber(MIN_NUMBER, MAX_NUMBER);
             char[] allOperators = {'+', '-', '*'};
             var operatorPosition = (int) (Math.random() * allOperators.length);
             char operator = allOperators[operatorPosition];
-            String question = "Question: " + firstNumber + " " + operator + " " + secondNumber;
+            String question = firstNumber + " " + operator + " " + secondNumber;
             String answer = String.valueOf(calculate(operator, firstNumber, secondNumber));
             questionAnswer[i][0] = question;
             questionAnswer[i][1] = answer;

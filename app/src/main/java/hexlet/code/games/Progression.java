@@ -11,6 +11,8 @@ public class Progression {
     private static final int MAX_LENGTH = 6;
     private static final int MIN_STEP = 1;
     private static final int MAX_STEP = 9;
+    static final int MIN_NUMBER = 1;
+    static final int MAX_NUMBER = 100;
     private static final String GAME_TASK = "What number is missing in the progression?";
 
 
@@ -19,13 +21,13 @@ public class Progression {
 
         for (var i = 0; i < QUESTIONS_ARRAY_SIZE; i++) {
             var progressionLength = (int) (Math.random() * MIN_LENGTH + MAX_LENGTH);
-            var baseElement = Utils.findRandomNumber();
+            var baseElement = Utils.findRandomNumber(MIN_NUMBER, MAX_NUMBER);
             var progressionStep = (int) (Math.random() * MAX_STEP + MIN_STEP);
             var missingElement = (int) (Math.random() * progressionLength);
             String[] progressionToPrint = createProgression(baseElement, progressionStep, progressionLength);
             String answer = progressionToPrint[missingElement];
             progressionToPrint[missingElement] = "..";
-            String question = "Question: " + String.join(" ", progressionToPrint);
+            String question = String.join(" ", progressionToPrint);
             questionAnswer[i][0] = question;
             questionAnswer[i][1] = answer;
         }
