@@ -3,9 +3,11 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
+import static hexlet.code.Engine.QUESTIONS_ARRAY_SIZE;
+
+
 public class Progression {
 
-    private static final int QUESTIONS_ARRAY_SIZE = 3;
     private static final int ANSWERS_ARRAY_SIZE = 2;
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 6;

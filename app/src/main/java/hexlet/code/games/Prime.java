@@ -3,8 +3,10 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
+import static hexlet.code.Engine.QUESTIONS_ARRAY_SIZE;
+
+
 public class Prime {
-    private static final int QUESTIONS_ARRAY_SIZE = 3;
     private static final int ANSWERS_ARRAY_SIZE = 2;
     static final int MIN_NUMBER = 1;
     static final int MAX_NUMBER = 100;

@@ -13,6 +13,9 @@ public class Engine {
        После трех верных ответов игра завершается победой.
      */
 
+    public static final int QUESTIONS_ARRAY_SIZE = 3;
+
+
     public static void gameMechanics(String gameTask, String[][] questionAnswer) {
         String userName;
         String answer;
